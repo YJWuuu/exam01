@@ -35,25 +35,25 @@ int main() {
             PWM1.period(0.001);
             PWM1 = i;
             Ain = PWM1;
-            ADCdata[i] = Ain;
+            ADCdata[j] = Ain;
             wait(1. / sample);
             time += 1./sample;
-            (if time > 0.1) {
+            if (time > 0.1) {
                 time -= 0.1;
                 i += 0.1;
             }
             pc.printf("%1.3f\r\n", ADCdata[k]);
             k++;
         }
-        float i = 0.9;
+        i = 0.9;
         while (i >= 0) {
             PWM1.period(0.001);
             PWM1 = i;
             Ain = PWM1;
-            ADCdata[i] = Ain;
+            ADCdata[j] = Ain;
             wait(1. / sample);
             time += 1./sample;
-            (if time > 0.1) {
+            if (time > 0.1) {
                 time -=0.1; 
                 i -= 0.1;
             }
